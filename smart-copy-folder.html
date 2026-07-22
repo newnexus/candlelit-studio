@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Copy Folder — CandleLit Studio</title>
+<meta name="description" content="Smart Copy Folder is a Unity Editor tool that copies folders of assets while remapping internal references to the new copies.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M12 3c2 2.5 3 4.2 3 6a3 3 0 1 1-6 0c0-1.8 1-3.5 3-6z" fill="#f5a623"/>
+        <rect x="10" y="12" width="4" height="8" rx="1" fill="#a89a87"/>
+      </svg>
+      CandleLit Studio
+    </a>
+    <a class="navlink" href="index.html">Home</a>
+    <a class="navlink active" href="smart-copy-folder.html">Smart Copy Folder</a>
+    <a class="navlink" href="missing-reference-pinger.html">Missing Reference Pinger</a>
+    <a class="navlink" href="about.html">About us</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="page-head">
+      <span class="badge available">Available</span>
+      <h1>Smart Copy Folder <span class="version">1.0.0</span></h1>
+      <p class="lede">
+        In Unity, copying folders does not keep correct references inside the assets —
+        the copies still point at the originals. Smart Copy Folder fixes that: it copies
+        folders of assets while automatically updating every internal reference to point
+        at the newly copied assets, renaming where needed.
+      </p>
+      <div class="actions" style="margin-top: 1.25rem;">
+        <a class="btn primary" href="https://assetstore.unity.com/packages/tools/utilities/smart-copy-folder-289032" target="_blank" rel="noopener">Get it on the Asset Store — $4.99</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>Why you need it</h2>
+      <p>
+        Duplicating a folder to create a variant — a new enemy set, an alternative UI theme,
+        a tweaked animation set — silently leaves the copies referencing the original assets.
+        Smart Copy Folder reassigns those references intelligently, which makes it especially
+        useful for:
+      </p>
+      <ul>
+        <li><strong>ScriptableObjects</strong> that reference each other</li>
+        <li><strong>Prefabs</strong> with nested asset references</li>
+        <li><strong>Animations</strong> and their controllers</li>
+      </ul>
+
+      <!-- TODO: drop real screenshots into assets/ and replace this placeholder -->
+      <div class="shot">Screenshot coming soon</div>
+
+      <h2>How to use</h2>
+      <h3>With the mouse</h3>
+      <ol>
+        <li>Select the folder(s) you want to copy in the Project window.</li>
+        <li>Right-click to open the context menu.</li>
+        <li>Click <strong>Smart Copy Folder</strong>.</li>
+      </ol>
+
+      <h3>With the keyboard</h3>
+      <ul>
+        <li>Windows / Linux: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></li>
+        <li>macOS: <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></li>
+      </ul>
+
+      <h2>Configuration</h2>
+      <p>You can customise the tool's behaviour in two ways:</p>
+      <ul>
+        <li>
+          <strong>JSON settings file</strong> (recommended — avoids recompilation):
+          <code>Assets/Candlelit Studio/Smart Copy Folder/Editor/Smart Copy Settings.json</code>
+        </li>
+        <li>
+          <strong>Hardcoding</strong> via the <code>Settings</code> subclass in
+          <code>Smart Copy Folder.cs</code>
+        </li>
+      </ul>
+
+      <h2>Support &amp; FAQ</h2>
+      <div class="callout">
+        <p><strong>Known issues:</strong> none reported.</p>
+        <p>
+          Have a question or found a problem? Email us at
+          <a href="mailto:candlelitstudio@yahoo.com">candlelitstudio@yahoo.com</a> —
+          we'll help you get unstuck.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 CandleLit Studio · Nottingham, United Kingdom</span>
+    <a href="mailto:candlelitstudio@yahoo.com">candlelitstudio@yahoo.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
